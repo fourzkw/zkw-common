@@ -1,0 +1,3 @@
+使用 g++ motorContral.cpp -o motorContral 命令编译
+使用文件目录下使用 ./motorContral 执行文件
+文件使用clang-format格式规范
