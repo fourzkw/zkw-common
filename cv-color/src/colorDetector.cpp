@@ -26,8 +26,7 @@ void ColorDetector::Detectcolor(Mat &targetImg, TargetColor targetColor) {
 void ColorDetector::Find_TargetColorContours(Mat inputImg,
                                              vector<vector<Point>> &contours) {
   vector<vector<Point>> shape_contours;
-  std::vector<cv::Vec4i> tmpH;
-  findContours(inputImg, shape_contours, tmpH, RETR_EXTERNAL,
+  findContours(inputImg, shape_contours, RETR_EXTERNAL,
                CHAIN_APPROX_SIMPLE);
   for (auto contour : shape_contours) {
     float area = contourArea(contour);
