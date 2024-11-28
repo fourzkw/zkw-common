@@ -1,0 +1,8 @@
+founder_node:
+  ros__parameters:
+    ekf.xyz: 0.50
+    ekf.yaw: 0.355
+    ekf.r: 0.802
+    vx: 2
+    vy: 1
+    vz: 3
