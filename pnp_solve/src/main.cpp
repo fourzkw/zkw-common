@@ -15,6 +15,6 @@ int main() {
   pnp_solver.Img_Coor.push_back(i3);
   pnp_solver.Img_Coor.push_back(i4);
   pnp_solver.calculate_rtVec();
-  cout<<pnp_solver.calculate_distance()<<endl;
+  cout << pnp_solver.calculate_distance() << endl;
   return 0;
 }

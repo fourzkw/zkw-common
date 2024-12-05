@@ -9,18 +9,17 @@ Pnp_Solve::Pnp_Solve() {
       (Mat_<double>(1, 5) << 0.003518, -0.311778, -0.016581, 0.023682, 0.0000);
 }
 
-void Pnp_Solve::calculate_rtVec()
-{
-	//pnp解算
-	solvePnP(World_Coor,Img_Coor,cam,dis,rVec,tVec,false,SOLVEPNP_ITERATIVE);
-	//转化为矩阵
-	Rodrigues(rVec, rotationMatrix);
+void Pnp_Solve::calculate_rtVec() {
+  // pnp解算
+  solvePnP(World_Coor, Img_Coor, cam, dis, rVec, tVec, false,
+           SOLVEPNP_ITERATIVE);
+  //转化为矩阵
+  Rodrigues(rVec, rotationMatrix);
 }
 
-double Pnp_Solve::calculate_distance()
-{
-	double distance = sqrt(pow(tVec.at<double>(0,0), 2) + 
-                      pow(tVec.at<double>(1,0), 2) + 
-                      pow(tVec.at<double>(2,0), 2));
-	return distance;
+double Pnp_Solve::calculate_distance() {
+  double distance =
+      sqrt(pow(tVec.at<double>(0, 0), 2) + pow(tVec.at<double>(1, 0), 2) +
+           pow(tVec.at<double>(2, 0), 2));
+  return distance;
 }

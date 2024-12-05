@@ -21,8 +21,8 @@ public:
   Pnp_Solve();
   vector<Point3d> World_Coor;
   vector<Point2d> Img_Coor;
-  void calculate_rtVec(); //计算平移、旋转向量
-  double calculate_distance();	//计算距离
+  void calculate_rtVec();      //计算平移、旋转向量
+  double calculate_distance(); //计算距离
 };
 
 #endif
